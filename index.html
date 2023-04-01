@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <script src="https://cdn.tailwindcss.com"></script>
+      <title>Basics of Testing</title>
+      <script type="module" defer src="app.js"></script>
+      <style>
+         * {
+            box-sizing: border-box;
+         }
+         input:focus {
+            outline: none;
+         }
+         #num1,
+         #num2 {
+            padding: 0 0.2rem;
+            border-radius: 4px;
+         }
+      </style>
+   </head>
+   <body class="bg-slate-700 px-5">
+      <form
+         action="/calculate"
+         method="POST"
+         class="w-full max-w-md mx-auto mt-5 bg-slate-200 rounded flex flex-col justify-center p-5 gap-2"
+      >
+         <input
+            id="num1"
+            name="num1"
+            type="numeric"
+            placeholder="First Number"
+         />
+
+         <input
+            id="num2"
+            name="num2"
+            type="numeric"
+            placeholder="Second Number"
+         />
+
+         <div class="flex justify-between gap-2 items-start">
+            <button class="bg-slate-700 text-white w-36">Calculate</button>
+            <div id="result"></div>
+         </div>
+      </form>
+   </body>
+</html>
